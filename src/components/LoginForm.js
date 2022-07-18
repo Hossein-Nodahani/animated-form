@@ -3,7 +3,8 @@ import React , {useState , useEffect} from 'react';
 import { validateDatas } from './validation';
 
 // styled components 
-import { FormBox , Input  } from './styledComponenets';
+import { FormBox , Input , Error} from './styledComponenets';
+
 
 
 const initialData = {
@@ -31,13 +32,13 @@ const LoginForm = () => {
                                 <div>
                                         <label>نام کاربری</label>
                                         <Input type="text" value={data.username} name="username"  onChange={changeHandeler}/>
-                                        {errors.username && <span>{errors.username}</span>}
+                                        {errors.username && <Error>{errors.username}</Error>}
                                 </div>
                                 
                                 <div>
                                         <label>رمز عبور</label>
                                         <Input type="password" value={data.password} name="password"  onChange={changeHandeler}/>
-                                        {errors.password && <span>{errors.password}</span>}
+                                        {errors.password && <Error>{errors.password}</Error>}
                                 </div>
                                
                                 <div>

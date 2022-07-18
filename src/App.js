@@ -1,10 +1,12 @@
 
-import Forms from './components/Forms';
+import Container from './components/Container';
+import Background from './components/Background';
 
 function App() {
   return (
     <>
-        <Forms />
+        <Container />
+        <Background />
     </>
   );
 }

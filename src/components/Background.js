@@ -17,7 +17,7 @@ const animation =keyframes`
 const BackgroundPicture = styled.div`
                                                     width : 100% ;
                                                     opacity:0;
-                                                    height : 100vh ;
+                                                    height : 100% ;
                                                     position : absolute ;
                                                     top : 0 ;
                                                     z-index : -1;
@@ -31,13 +31,13 @@ const BackgroundPicture = styled.div`
 
 const Background = () => {
     return (
-        <div>
+        <>
                 <BackgroundPicture image={bg1}  delay="0s" />
                 <BackgroundPicture image={bg2}  delay="4s" />
                 <BackgroundPicture image={bg3}   delay="12s"/>
                 <BackgroundPicture image={bg4}   delay="18s"/>
                 <BackgroundPicture image={bg5}   delay="24s"/> 
-        </div>
+        </>
     );
 };
 

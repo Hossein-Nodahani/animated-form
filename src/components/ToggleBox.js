@@ -1,4 +1,4 @@
-import React ,{useState} from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 
@@ -30,24 +30,18 @@ const Active = styled(Button)`
         width: 50%;
         position: absolute;
         right: ${props => props.active=="register" ? "0" : "5rem"};
-        transition: right .5s;
+        transition: right .7s;
 `;
 
 const activForm = React.createContext();
 
-const ToggleBox = () => {
-
-    const [active , setActive] = useState("register");
-
-    const clickHandeler = (event) =>{
-            event.target.name=="register" ? setActive("register") : setActive("login");
-    }
+const ToggleBox = (props) => {
 
     return (
         <Box>
-                <Active active={active} />
-                <Button active={active} name="register" onClick={clickHandeler} > ثبت نام</Button>
-                <Button active={active} name="login" onClick={clickHandeler} > ورود</Button>
+                <Active active={props.activeForm} />
+                <Button active={props.activeForm} name="register" onClick={props.changeAcitveForm} > ثبت نام</Button>
+                <Button active={props.activeForm} name="login" onClick={props.changeAcitveForm} > ورود</Button>
         </Box>
     );
 };

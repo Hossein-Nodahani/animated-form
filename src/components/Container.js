@@ -1,4 +1,4 @@
-import React from 'react';
+import React , {useState} from 'react';
 import styled from 'styled-components';
 
 import ToggleBox from './ToggleBox';
@@ -7,24 +7,32 @@ import LoginForm from './LoginForm';
 
 const Box = styled.div`
         width: 20rem;
-        height: 35rem;
+        height: 85%;
         background-color: #FFFFFF;
         border-radius: 20px;
-        margin: 3rem auto;
         padding: 20px;
         position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
+        overflow: hidden;
 `;
 
 const Container = () => {
+
+    const [active , setActive] = useState("register");
+
+    const clickHandeler = (event) =>{
+            event.target.name=="register" ? setActive("register") : setActive("login");
+            console.log(event.target);
+    }
+
     return (
         <>
                <Box >
-                    <ToggleBox />
-                    <RegisterForm />
-                    <LoginForm />
+                    <ToggleBox activeForm={active}  changeAcitveForm={clickHandeler} />
+                    <RegisterForm  activeForm={active}/>
+                    <LoginForm activeForm={active} />
                </Box >
         </>
     );

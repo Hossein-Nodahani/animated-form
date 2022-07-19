@@ -5,7 +5,7 @@ export const validateDatas = ( formType , data ) => {
     data.username.trim() ?  delete errors.username : 
                         errors ={...errors , username: "لطفا نام کاربری را وارد کنید!" } ;
 
-    data.password.trim() ? (data.password.length >= 8 ? delete errors.password : errors ={...errors ,password : "پسورد باید حداقل 8 کاراکتر باشد !" }) :
+    data.password? (data.password.trim().length >= 8 ? delete errors.password : errors ={...errors ,password : "پسورد باید حداقل 8 کاراکتر باشد !" }) :
                                             errors ={...errors , password : "لطفا پسورد خود را وارد کنید!" }
 
     if ( formType =="login") {

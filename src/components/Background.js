@@ -21,7 +21,7 @@ const BackgroundPicture = styled.div`
                                                     position : absolute ;
                                                     top : 0 ;
                                                     z-index : -1;
-                                                    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)),url(${props => props.image}) no-repeat center;
+                                                    background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),url(${props => props.image}) no-repeat center;
                                                     background-size: cover;
                                                     animation-name: ${animation};
                                                     animation-duration: 30s;

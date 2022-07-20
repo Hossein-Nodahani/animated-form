@@ -6,10 +6,12 @@ import styled from 'styled-components';
 const Box = styled.div`
     position: absolute;
     width: 50%;
-    box-shadow: 0px 0px 40px 0px rgba(0,0,0,0.5);
-    -webkit-box-shadow: 0px 0px 40px 0px rgba(0,0,0,0.5);
-    -moz-box-shadow: 0px 0px 40px 0px rgba(0,0,0,0.5);
+    height: 3rem;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,1);
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,1);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,1);
     border-radius: 25px;    
+    display: flex;
 `;
 
 const Button = styled.button`

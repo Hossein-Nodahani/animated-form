@@ -7,7 +7,7 @@ import LoginForm from './LoginForm';
 
 const Box = styled.div`
         width: 20rem;
-        height: 85%;
+        height: 35rem;
         background-color: #FFFFFF;
         border-radius: 20px;
         padding: 20px;

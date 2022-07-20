@@ -45,27 +45,27 @@ const RegisterForm = (props) => {
                 <FormBox type="register" activeForm={props.activeForm} onSubmit={submitHandeler}>
                                 <div>
                                         <Label>نام کاربری</Label>
-                                        <Input type="text" value={data.username} name="username"  onChange={changeHandeler} onFocus={focusHandeler}/>
+                                        <Input type="text" value={data.username} name="username"  onChange={changeHandeler} onFocus={focusHandeler} errors={errors} isFocused={isFocused}/>
                                         {errors.username && isFocused.username  && <Error>{errors.username}</Error>}
                                 </div>
                                 <div>
                                         <Label>ایمیل</Label>
-                                        <Input type="email" value={data.email} name="email"  onChange={changeHandeler} onFocus={focusHandeler}/>
+                                        <Input type="email" value={data.email} name="email"  onChange={changeHandeler} onFocus={focusHandeler} errors={errors} isFocused={isFocused}/>
                                         {errors.email && isFocused.email  && <Error>{errors.email}</Error>}
                                 </div>
                                 <div>
                                         <Label>رمز عبور</Label>
-                                        <Input type="password" value={data.password} name="password"  onChange={changeHandeler} onFocus={focusHandeler}/>
+                                        <Input type="password" value={data.password} name="password"  onChange={changeHandeler} onFocus={focusHandeler} errors={errors} isFocused={isFocused}/>
                                         {errors.password && isFocused.password  && <Error>{errors.password}</Error>}
                                 </div>
                                 <div>
                                         <Label>تکرار رمز عبور</Label>
-                                        <Input type="password" value={data.repeatedPassword} name="repeatedPassword" onChange={changeHandeler} onFocus={focusHandeler}/>
+                                        <Input type="password" value={data.repeatedPassword} name="repeatedPassword" onChange={changeHandeler} onFocus={focusHandeler} errors={errors} isFocused={isFocused}/>
                                         {errors.repeatedPassword && isFocused.repeatedPassword  && <Error>{errors.repeatedPassword}</Error>}
                                 </div>
                                 <div>
                                         <div>
-                                                <Input type="checkbox" value={data.isRulesAccepted} name="isAccepted" onChange={changeHandeler} />
+                                                <Input type="checkbox" value={data.isRulesAccepted} name="isAccepted" onChange={changeHandeler} errors={errors} isFocused={isFocused} />
                                                 <Label accept="true" > <a href='#'>قوانین</a> را میپذیرم!</Label>
                                         </div>
                                         {errors.isAccepted && isFocused.repeatedPassword  && <Error>{errors.isAccepted}</Error>}
